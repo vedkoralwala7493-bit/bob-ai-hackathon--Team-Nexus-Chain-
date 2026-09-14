@@ -1,0 +1,1666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>
+    ChainGuard AI
+  </title>
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+
+</head>
+
+<body>
+
+  <div class="app-shell">
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+      <div class="brand">
+
+        <div class="brand-icon">
+          CG
+        </div>
+
+        <div>
+
+          <h2>
+            ChainGuard AI
+          </h2>
+
+          <span>
+            Supply Chain Intelligence
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <nav class="nav">
+
+        <button
+          class="nav-item active"
+          data-section="dashboard"
+        >
+          Dashboard
+        </button>
+
+
+        <button
+          class="nav-item"
+          data-section="analysis"
+        >
+          Disruption Analysis
+        </button>
+
+
+        <button
+          class="nav-item"
+          data-section="operations"
+        >
+          Operations
+        </button>
+
+      </nav>
+
+
+      <div class="sidebar-note">
+
+        <strong>
+          Prototype Mode
+        </strong>
+
+        <p>
+          ChainGuard AI demo using sample
+          logistics data and API-free route
+          visualization.
+        </p>
+
+      </div>
+
+    </aside>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="main-content">
+
+
+      <!-- ================= TOPBAR ================= -->
+
+      <header class="topbar">
+
+        <div>
+
+          <p class="eyebrow">
+            AI LOGISTICS CONTROL ROOM
+          </p>
+
+          <h1 id="page-title">
+            Dashboard
+          </h1>
+
+        </div>
+
+
+        <div class="status-pill">
+
+          <span></span>
+
+          System Operational
+
+        </div>
+
+      </header>
+
+
+      <!-- =====================================================
+           DASHBOARD
+           ===================================================== -->
+
+      <section
+  id="dashboard"
+  class="page-section active-section"
+>
+
+  <!-- COMMAND HEADER -->
+
+  <div class="command-hero">
+
+    <div class="hero-copy">
+
+      <div class="eyebrow">
+        AI LOGISTICS CONTROL ROOM
+      </div>
+
+      <h2>
+        Supply chain status at a glance.
+      </h2>
+
+      <p>
+        Monitor active disruptions, prioritize risky
+        shipments and take faster operational decisions.
+      </p>
+
+    </div>
+
+    <div class="hero-actions">
+
+      <div class="system-status">
+        <span class="status-dot"></span>
+
+        <div>
+          <strong>
+            Network Stable
+          </strong>
+
+          <small>
+            Last updated just now
+          </small>
+        </div>
+
+      </div>
+
+      <button
+        class="primary-btn"
+        id="open-analysis"
+      >
+        Analyze Disruption
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <!-- KEY METRICS -->
+
+  <div class="command-metrics">
+
+    <div class="command-stat">
+
+      <div class="stat-icon danger-icon">
+        !
+      </div>
+
+      <div>
+
+        <span>
+          Active Disruptions
+        </span>
+
+        <strong>
+          03
+        </strong>
+
+        <small class="danger-text">
+          1 requires immediate action
+        </small>
+
+      </div>
+
+    </div>
+
+
+    <div class="command-stat">
+
+      <div class="stat-icon shipment-icon">
+        S
+      </div>
+
+      <div>
+
+        <span>
+          Affected Shipments
+        </span>
+
+        <strong>
+          12
+        </strong>
+
+        <small>
+          Across 3 routes
+        </small>
+
+      </div>
+
+    </div>
+
+
+    <div class="command-stat">
+
+      <div class="stat-icon critical-icon">
+        !
+      </div>
+
+      <div>
+
+        <span>
+          Critical Risk
+        </span>
+
+        <strong>
+          04
+        </strong>
+
+        <small class="danger-text">
+          Needs attention
+        </small>
+
+      </div>
+
+    </div>
+
+
+    <div class="command-stat">
+
+      <div class="stat-icon fleet-icon">
+        T
+      </div>
+
+      <div>
+
+        <span>
+          Fleet Available
+        </span>
+
+        <strong>
+          07
+        </strong>
+
+        <small class="success-text">
+          Ready to redeploy
+        </small>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- MAIN CONTROL GRID -->
+
+  <div class="dashboard-control-grid">
+
+
+    <!-- SHIPMENT PRIORITY -->
+
+    <div class="panel shipment-panel">
+
+      <div class="panel-header enhanced-header">
+
+        <div>
+
+          <span class="section-label">
+            PRIORITY QUEUE
+          </span>
+
+          <h3>
+            Shipment Risk Monitor
+          </h3>
+
+          <p>
+            Shipments currently requiring operational attention.
+          </p>
+
+        </div>
+
+        <button class="mini-btn">
+          View All
+        </button>
+
+      </div>
+
+
+      <div class="priority-list">
+
+        <div class="priority-row critical-row">
+
+          <div class="shipment-id">
+            <span class="shipment-marker critical-marker">
+              S1
+            </span>
+
+            <div>
+              <strong>
+                S101
+              </strong>
+
+              <small>
+                Medicine · Nadiad → Anand
+              </small>
+            </div>
+          </div>
+
+
+          <div class="priority-reason">
+            <span class="risk-badge critical">
+              CRITICAL
+            </span>
+
+            <small>
+              Route disruption
+            </small>
+          </div>
+
+
+          <div class="priority-action">
+            Reroute + Truck
+          </div>
+
+        </div>
+
+
+        <div class="priority-row critical-row">
+
+          <div class="shipment-id">
+            <span class="shipment-marker critical-marker">
+              S3
+            </span>
+
+            <div>
+              <strong>
+                S103
+              </strong>
+
+              <small>
+                Vaccine · Nadiad → Anand
+              </small>
+            </div>
+          </div>
+
+
+          <div class="priority-reason">
+
+            <span class="risk-badge critical">
+              CRITICAL
+            </span>
+
+            <small>
+              Temperature alert
+            </small>
+
+          </div>
+
+
+          <div class="priority-action">
+            Cold-chain action
+          </div>
+
+        </div>
+
+
+        <div class="priority-row high-row">
+
+          <div class="shipment-id">
+
+            <span class="shipment-marker high-marker">
+              S5
+            </span>
+
+            <div>
+
+              <strong>
+                S105
+              </strong>
+
+              <small>
+                Medicine · Nadiad → Vadodara
+              </small>
+
+            </div>
+
+          </div>
+
+
+          <div class="priority-reason">
+
+            <span class="risk-badge high">
+              HIGH
+            </span>
+
+            <small>
+              Fleet required
+            </small>
+
+          </div>
+
+
+          <div class="priority-action">
+            Reassign Fleet
+          </div>
+
+        </div>
+
+
+        <div class="priority-row medium-row">
+
+          <div class="shipment-id">
+
+            <span class="shipment-marker medium-marker">
+              S2
+            </span>
+
+            <div>
+
+              <strong>
+                S102
+              </strong>
+
+              <small>
+                Medicine · Nadiad → Anand
+              </small>
+
+            </div>
+
+          </div>
+
+
+          <div class="priority-reason">
+
+            <span class="risk-badge medium">
+              MEDIUM
+            </span>
+
+            <small>
+              Delay risk
+            </small>
+
+          </div>
+
+
+          <div class="priority-action">
+            Alternate Route
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- LIVE ALERTS -->
+
+    <div class="panel alert-panel">
+
+      <div class="panel-header enhanced-header">
+
+        <div>
+
+          <span class="section-label">
+            LIVE ALERTS
+          </span>
+
+          <h3>
+            What needs attention?
+          </h3>
+
+          <p>
+            Recent events affecting operations.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="live-alert-stack">
+
+
+        <div class="live-alert critical-alert">
+
+          <div class="alert-symbol">
+            !
+          </div>
+
+          <div>
+
+            <strong>
+              Cold-chain excursion
+            </strong>
+
+            <p>
+              S103 temperature reached 10°C.
+            </p>
+
+            <small>
+              Safe range: 2°C – 8°C
+            </small>
+
+          </div>
+
+        </div>
+
+
+        <div class="live-alert warning-alert">
+
+          <div class="alert-symbol">
+            ↗
+          </div>
+
+          <div>
+
+            <strong>
+              Route disruption
+            </strong>
+
+            <p>
+              Nadiad → Anand road blockage detected.
+            </p>
+
+            <small>
+              Alternate route recommended
+            </small>
+
+          </div>
+
+        </div>
+
+
+        <div class="live-alert success-alert">
+
+          <div class="alert-symbol">
+            ✓
+          </div>
+
+          <div>
+
+            <strong>
+              Fleet available
+            </strong>
+
+            <p>
+              T07, T09 and T15 are idle.
+            </p>
+
+            <small>
+              Ready for redeployment
+            </small>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- NETWORK SNAPSHOT -->
+
+  <div class="panel network-panel">
+
+    <div class="panel-header enhanced-header">
+
+      <div>
+
+        <span class="section-label">
+          NETWORK SNAPSHOT
+        </span>
+
+        <h3>
+          Current Logistics Flow
+        </h3>
+
+      </div>
+
+      <span class="panel-tag">
+        DEMO DATA
+      </span>
+
+    </div>
+
+
+    <div class="network-flow">
+
+      <div class="network-node">
+
+        <div class="node-icon">
+          F
+        </div>
+
+        <div>
+
+          <strong>
+            Origin
+          </strong>
+
+          <span>
+            Nadiad
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <div class="network-line">
+        <span></span>
+      </div>
+
+
+      <div class="network-node disruption-node">
+
+        <div class="node-icon">
+          !
+        </div>
+
+        <div>
+
+          <strong>
+            Disruption
+          </strong>
+
+          <span>
+            Road Blockage
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <div class="network-line">
+        <span></span>
+      </div>
+
+
+      <div class="network-node">
+
+        <div class="node-icon">
+          A
+        </div>
+
+        <div>
+
+          <strong>
+            Destination
+          </strong>
+
+          <span>
+            Anand
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <div class="network-summary">
+
+        <span>
+          AI recommendation
+        </span>
+
+        <strong>
+          Route B
+        </strong>
+
+        <small>
+          Lower disruption risk
+        </small>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  </section>
+      <!-- =====================================================
+           DISRUPTION ANALYSIS
+           ===================================================== -->
+
+      <section
+        id="analysis"
+        class="page-section"
+      >
+
+
+        <div class="section-heading">
+
+          <p class="eyebrow">
+            DISRUPTION INTELLIGENCE
+          </p>
+
+          <h2>
+            Analyze a New Disruption
+          </h2>
+
+          <p>
+            Select the cities, enter the disruption details,
+            and provide the current shipment temperature.
+          </p>
+
+        </div>
+
+
+        <div class="content-grid">
+
+
+          <!-- INPUT + FLEET UTILISATION STACK -->
+
+          <div class="analysis-left-stack">
+
+            <!-- INPUT PANEL -->
+
+            <div class="panel analysis-input-panel">
+
+
+              <div class="form-grid">
+
+
+              <!-- ORIGIN -->
+
+              <label>
+
+                Origin City
+
+                <select id="origin">
+                </select>
+
+              </label>
+
+
+              <!-- DESTINATION -->
+
+              <label>
+
+                Destination City
+
+                <select id="destination">
+                </select>
+
+              </label>
+
+
+              <!-- DISRUPTION -->
+
+              <label>
+
+                Disruption
+
+                <select id="disruption">
+
+                  <option>
+                    Road Blockage
+                  </option>
+
+                  <option>
+                    Heavy Weather
+                  </option>
+
+                  <option>
+                    Vehicle Breakdown
+                  </option>
+
+                  <option>
+                    Port Strike
+                  </option>
+
+                  <option>
+                    Traffic Congestion
+                  </option>
+
+                  <option>
+                    Route Closure
+                  </option>
+
+                  <option>
+                    Other Supply Disruption
+                  </option>
+
+                </select>
+
+              </label>
+
+
+              <!-- SEVERITY -->
+
+              <label>
+
+                Severity
+
+                <select id="severity">
+
+                  <option>
+                    High
+                  </option>
+
+                  <option>
+                    Critical
+                  </option>
+
+                  <option>
+                    Medium
+                  </option>
+
+                  <option>
+                    Low
+                  </option>
+
+                </select>
+
+              </label>
+
+
+              <!-- AVAILABLE TRUCKS -->
+
+              <label>
+
+                Available Trucks
+
+                <input
+                  id="trucks"
+                  type="number"
+                  min="0"
+                  value="2"
+                >
+
+              </label>
+
+
+              <!-- SHIPMENT TYPE -->
+
+              <label>
+
+                Shipment Type
+
+                <select id="shipment-type">
+
+                  <option value="Medicine">
+                    Medicine
+                  </option>
+
+                  <option value="Vaccine">
+                    Vaccine
+                  </option>
+
+                  <option value="Food">
+                    Food / Perishable
+                  </option>
+
+                  <option value="General">
+                    General Cargo
+                  </option>
+
+                </select>
+
+              </label>
+
+
+              <!-- CURRENT TEMPERATURE -->
+
+              <label>
+
+                Current Shipment Temperature (°C)
+
+                <input
+                  id="temperature"
+                  type="number"
+                  step="0.1"
+                  value="6"
+                >
+
+              </label>
+
+
+              <!-- MIN TEMP -->
+
+              <label>
+
+                Minimum Safe Temperature (°C)
+
+                <input
+                  id="temp-min"
+                  type="number"
+                  step="0.1"
+                  value="2"
+                >
+
+              </label>
+
+
+              <!-- MAX TEMP -->
+
+              <label>
+
+                Maximum Safe Temperature (°C)
+
+                <input
+                  id="temp-max"
+                  type="number"
+                  step="0.1"
+                  value="8"
+                >
+
+              </label>
+
+            </div>
+
+
+            <!-- TEMP INFO -->
+
+            <div class="temperature-helper">
+
+              <div class="temperature-icon">
+                🌡️
+              </div>
+
+              <div>
+
+                <strong>
+                  Cold-Chain Check
+                </strong>
+
+                <p>
+                  The system compares the current shipment
+                  temperature with the safe temperature range.
+                </p>
+
+              </div>
+
+            </div>
+
+
+            <!-- ANALYZE -->
+
+            <button
+              class="primary-btn"
+              id="analyze-btn"
+            >
+
+              Analyze with AI
+
+            </button>
+
+            </div>
+
+
+            <!-- FLEET UTILISATION OVERVIEW -->
+
+            <div class="panel fleet-overview-panel">
+
+              <div class="panel-header enhanced-header">
+
+                <div>
+                  <span class="section-label">FLEET INTELLIGENCE</span>
+                  <h3>Fleet Utilisation Overview</h3>
+                  <p>Current asset allocation across the demo network.</p>
+                </div>
+
+                <span class="panel-tag">OPTIMIZER</span>
+
+              </div>
+
+              <div class="fleet-overview-grid">
+
+                <div
+                  class="fleet-donut"
+                  id="fleet-utilization-chart"
+                  style="--utilization: 42%"
+                  aria-label="Fleet utilization 42 percent"
+                >
+                  <div class="fleet-donut-center">
+                    <strong id="fleet-utilization-value">42%</strong>
+                    <span>Utilised</span>
+                  </div>
+                </div>
+
+                <div class="fleet-overview-stats">
+
+                  <div class="fleet-stat-card active">
+                    <span class="fleet-stat-dot"></span>
+                    <div>
+                      <strong id="fleet-active-count">05</strong>
+                      <small>In Transit</small>
+                    </div>
+                  </div>
+
+                  <div class="fleet-stat-card idle">
+                    <span class="fleet-stat-dot"></span>
+                    <div>
+                      <strong id="fleet-idle-count">07</strong>
+                      <small>Available</small>
+                    </div>
+                  </div>
+
+                  <div class="fleet-stat-card total">
+                    <span class="fleet-stat-dot"></span>
+                    <div>
+                      <strong id="fleet-total-count">12</strong>
+                      <small>Total Fleet</small>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+
+              <div class="fleet-optimization-note">
+                <div class="fleet-note-icon">↗</div>
+                <div>
+                  <strong>AI utilisation opportunity</strong>
+                  <p>
+                    7 available trucks can be redeployed to reduce idle capacity
+                    during active disruptions.
+                  </p>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- AI EXPLANATION -->
+
+            <div class="panel ai-explanation-panel" id="ai-explanation-panel">
+
+              <div class="ai-explanation-glow"></div>
+
+              <div class="ai-explanation-header">
+
+                <div class="ai-explanation-title-wrap">
+                  <div class="ai-explanation-icon">✦</div>
+                  <div>
+                    <span class="section-label">AI DECISION TRACE</span>
+                    <h3>Why did AI choose this route?</h3>
+                    <p>
+                      A quick explanation of the factors influencing the recommendation.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="ai-confidence-badge">
+                  <span>Confidence</span>
+                  <strong id="ai-confidence-value">—</strong>
+                </div>
+
+              </div>
+
+              <div class="ai-route-summary">
+                <div>
+                  <span class="ai-summary-label">Recommended route</span>
+                  <strong id="ai-explanation-route">Awaiting analysis</strong>
+                </div>
+                <span class="ai-route-pill" id="ai-explanation-risk">READY</span>
+              </div>
+
+              <div class="ai-reason-grid" id="ai-reason-grid">
+                <div class="ai-reason-item muted">
+                  <span class="ai-reason-check">•</span>
+                  <div>
+                    <strong>Route efficiency</strong>
+                    <p>Run the analysis to compare time and distance.</p>
+                  </div>
+                </div>
+
+                <div class="ai-reason-item muted">
+                  <span class="ai-reason-check">•</span>
+                  <div>
+                    <strong>Fleet availability</strong>
+                    <p>Your available-truck input will be considered.</p>
+                  </div>
+                </div>
+
+                <div class="ai-reason-item muted">
+                  <span class="ai-reason-check">•</span>
+                  <div>
+                    <strong>Shipment safety</strong>
+                    <p>Temperature and shipment type affect the decision.</p>
+                  </div>
+                </div>
+
+                <div class="ai-reason-item muted">
+                  <span class="ai-reason-check">•</span>
+                  <div>
+                    <strong>Disruption risk</strong>
+                    <p>Severity and disruption type shape the route priority.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="ai-bottom-strip">
+                <div class="ai-confidence-meter-wrap">
+                  <div class="ai-meter-label">
+                    <span>Decision confidence</span>
+                    <strong id="ai-confidence-label">Ready</strong>
+                  </div>
+                  <div class="ai-confidence-meter">
+                    <span id="ai-confidence-bar"></span>
+                  </div>
+                </div>
+
+                <div class="ai-saving-card">
+                  <span>Estimated operational saving</span>
+                  <strong id="ai-estimated-saving">₹ —</strong>
+                  <small>Prototype estimate</small>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- RESULT PANEL -->
+
+          <div class="panel result-panel">
+
+            <div class="panel-header">
+
+              <div>
+
+                <h3>
+                  AI Analysis
+                </h3>
+
+                <p>
+                  Risk, route and temperature recommendations.
+                </p>
+
+              </div>
+
+            </div>
+
+
+            <div
+              id="analysis-result"
+              class="empty-state"
+            >
+
+              Select your route and shipment details,
+              then click
+
+              <strong>
+                Analyze with AI
+              </strong>.
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- =====================================================
+           OPERATIONS
+           ===================================================== -->
+
+      <section
+  id="operations"
+  class="page-section"
+>
+
+
+  <div class="section-heading">
+
+    <p class="eyebrow">
+      OPERATIONS CONTROL
+    </p>
+
+    <h2>
+      Fleet & Cold-Chain Operations
+    </h2>
+
+    <p>
+      Manage available assets and monitor shipments
+      requiring temperature-controlled handling.
+    </p>
+
+  </div>
+
+
+  <!-- OPERATIONS SUMMARY -->
+
+  <div class="operations-summary">
+
+    <div class="operations-kpi">
+
+      <span>
+        Available Assets
+      </span>
+
+      <strong>
+        07
+      </strong>
+
+      <small class="success-text">
+        Ready now
+      </small>
+
+    </div>
+
+
+    <div class="operations-kpi">
+
+      <span>
+        In Transit
+      </span>
+
+      <strong>
+        05
+      </strong>
+
+      <small>
+        Active journeys
+      </small>
+
+    </div>
+
+
+    <div class="operations-kpi">
+
+      <span>
+        Cold-Chain Alerts
+      </span>
+
+      <strong class="danger-text">
+        02
+      </strong>
+
+      <small class="danger-text">
+        Immediate review
+      </small>
+
+    </div>
+
+
+    <div class="operations-kpi">
+
+      <span>
+        Recommended Actions
+      </span>
+
+      <strong>
+        04
+      </strong>
+
+      <small>
+        AI generated
+      </small>
+
+    </div>
+
+  </div>
+
+
+  <div class="operations-grid">
+
+
+    <!-- FLEET -->
+
+    <div class="panel fleet-control-panel">
+
+      <div class="panel-header enhanced-header">
+
+        <div>
+
+          <span class="section-label">
+            FLEET UTILISATION
+          </span>
+
+          <h3>
+            Available Vehicles
+          </h3>
+
+          <p>
+            Assets that can be redeployed immediately.
+          </p>
+
+        </div>
+
+        <span class="panel-tag">
+          7 AVAILABLE
+        </span>
+
+      </div>
+
+
+      <div class="fleet-control-list">
+
+
+        <div class="fleet-control-row recommended-fleet">
+
+          <div class="fleet-avatar">
+            T07
+          </div>
+
+          <div class="fleet-info">
+
+            <strong>
+              Truck T07
+            </strong>
+
+            <span>
+              Idle · Capacity 2.5T
+            </span>
+
+          </div>
+
+          <div class="fleet-route">
+
+            <small>
+              AI suggests
+            </small>
+
+            <strong>
+              S101
+            </strong>
+
+          </div>
+
+          <span class="fleet-status available">
+            AVAILABLE
+          </span>
+
+        </div>
+
+
+        <div class="fleet-control-row">
+
+          <div class="fleet-avatar">
+            T09
+          </div>
+
+          <div class="fleet-info">
+
+            <strong>
+              Truck T09
+            </strong>
+
+            <span>
+              Idle · Capacity 4T
+            </span>
+
+          </div>
+
+          <div class="fleet-route">
+
+            <small>
+              Status
+            </small>
+
+            <strong>
+              Standby
+            </strong>
+
+          </div>
+
+          <span class="fleet-status available">
+            AVAILABLE
+          </span>
+
+        </div>
+
+
+        <div class="fleet-control-row">
+
+          <div class="fleet-avatar">
+            T12
+          </div>
+
+          <div class="fleet-info">
+
+            <strong>
+              Truck T12
+            </strong>
+
+            <span>
+              In transit · Anand
+            </span>
+
+          </div>
+
+          <div class="fleet-route">
+
+            <small>
+              Shipment
+            </small>
+
+            <strong>
+              S102
+            </strong>
+
+          </div>
+
+          <span class="fleet-status transit">
+            IN TRANSIT
+          </span>
+
+        </div>
+
+
+        <div class="fleet-control-row">
+
+          <div class="fleet-avatar">
+            T15
+          </div>
+
+          <div class="fleet-info">
+
+            <strong>
+              Truck T15
+            </strong>
+
+            <span>
+              Idle · Capacity 3T
+            </span>
+
+          </div>
+
+          <div class="fleet-route">
+
+            <small>
+              Status
+            </small>
+
+            <strong>
+              Standby
+            </strong>
+
+          </div>
+
+          <span class="fleet-status available">
+            AVAILABLE
+          </span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- COLD CHAIN -->
+
+    <div class="panel cold-chain-panel">
+
+      <div class="panel-header enhanced-header">
+
+        <div>
+
+          <span class="section-label">
+            COLD-CHAIN MONITOR
+          </span>
+
+          <h3>
+            Shipment Temperature
+          </h3>
+
+          <p>
+            Real-time demo sensor view.
+          </p>
+
+        </div>
+
+        <span class="risk-badge critical">
+          2 ALERTS
+        </span>
+
+      </div>
+
+
+      <div class="cold-chain-main">
+
+
+        <div class="temperature-main">
+
+          <div>
+
+            <span>
+              Shipment S103
+            </span>
+
+            <strong>
+              10°C
+            </strong>
+
+            <small>
+              Current temperature
+            </small>
+
+          </div>
+
+
+          <div class="temperature-status-ring">
+
+            <span>
+              !
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <div class="safe-range-bar">
+
+          <div class="safe-range-labels">
+
+            <span>
+              Safe range
+            </span>
+
+            <strong>
+              2°C – 8°C
+            </strong>
+
+          </div>
+
+
+          <div class="range-track">
+
+            <div class="safe-range-zone"></div>
+
+            <div class="temperature-indicator"></div>
+
+          </div>
+
+        </div>
+
+
+        <div class="temperature-history">
+
+          <span>2°C</span>
+          <span>4°C</span>
+          <span>5°C</span>
+          <span>7°C</span>
+          <span class="danger-temp">
+            10°C
+          </span>
+
+        </div>
+
+
+        <div class="cold-action">
+
+          <div>
+
+            <strong>
+              AI Action Required
+            </strong>
+
+            <p>
+              Temperature has crossed the safe range.
+              Shipment should be prioritized for
+              controlled handling.
+            </p>
+
+          </div>
+
+          <button class="route-action-btn">
+            Review Shipment
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- OPERATIONS RECOMMENDATION -->
+
+  <div class="panel operations-recommendation">
+
+    <div class="recommendation-icon">
+      AI
+    </div>
+
+    <div>
+
+      <span class="section-label">
+        OPERATIONS ASSISTANT
+      </span>
+
+      <h3>
+        Recommended next actions
+      </h3>
+
+      <p>
+        Prioritize S103 for cold-chain intervention,
+        assign T07 to S101, and review Route B for
+        the Nadiad → Anand disruption.
+      </p>
+
+    </div>
+
+<button
+  class="primary-btn"
+  id="open-analysis-operations"
+>
+  Review Disruption
+</button>
+
+  </div>
+
+
+</section>
+
+
+  <!-- JAVASCRIPT -->
+
+  <script src="script.js"></script>
+
+</body>
+</html>
