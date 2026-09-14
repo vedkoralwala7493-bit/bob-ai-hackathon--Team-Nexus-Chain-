@@ -1,6 +1,7 @@
 # Screenshots
 
-Place your application screenshots in this folder.
+Place your application screenshots in this folder. Already placed
+
 
 ## Naming Convention
 
