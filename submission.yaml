@@ -33,7 +33,7 @@ submission:
     ChainGuard AI is an explainable decision-support prototype that takes
     route, disruption, severity, shipment, temperature and fleet inputs,
     generates alternate routes, validates shipment temperature safety and
-    recommends a suitable route with an operational explanation.
+    recommends to a suitable route with an operational explanation.
 
   key_features:
     - "Disruption and severity based route analysis"
