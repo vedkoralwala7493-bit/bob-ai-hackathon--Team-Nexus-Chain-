@@ -9,7 +9,7 @@
 | Field | Value |
 |---|---|
 | **Team Name** | [Team Nexus Chain] |
-| **Track** | [AI / DevOps / Sustainability / Open] |
+| **Track** | [AI] |
 | **Team Lead** | [Ved Koralwala] — [vedkoralwala7493@gmail.com] |
 | **Members** | [Nand Patel], [Tanmay Panchal], [Prerak Desai] |
 
