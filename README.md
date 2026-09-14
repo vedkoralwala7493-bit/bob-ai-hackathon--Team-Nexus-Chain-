@@ -108,14 +108,18 @@ cp .env.example .env
 
 > Be honest — judges appreciate transparency over overclaiming.
 
-- [Limitation 1: e.g., "Authentication is mocked — not production-ready"]
-- [Limitation 2: e.g., "Only tested on Chrome"]
-- [Limitation 3: e.g., "Feature X is scaffolded but not fully implemented"]
+- **Prototype Data:** The current version uses sample logistics, shipment, fleet, and temperature data instead of live enterprise data sources.
+- **Route Intelligence:** Route distance and travel-time values are simulated in the current API-free prototype; live road-routing data is not connected yet.
+- **AI Integration:** The current frontend contains prototype decision logic. Full IBM Bob-based AI analysis and recommendation integration is planned for the final implementation.
+- **Authentication & Database:** User authentication, persistent database storage, and production-level access control are not implemented in the current prototype.
+- **Production Deployment:** The current version is primarily a demonstration prototype and has not yet been tested at enterprise-scale workloads.
 
 ---
 
 ## 🏅 What We're Most Proud Of
 
-[Tell the judges what part of your submission is strongest and worth paying close attention to.]
+We are most proud of ChainGuard AI's **end-to-end disruption decision-support workflow**.
 
----
+Instead of only detecting a supply-chain problem, the system brings together **disruption analysis, shipment risk, temperature monitoring, route comparison, and fleet availability** to recommend what the operator should do next.
+
+Our key focus is **human-in-the-loop decision making**: ChainGuard AI provides an explainable recommendation, while the final operational decision remains with the user.
