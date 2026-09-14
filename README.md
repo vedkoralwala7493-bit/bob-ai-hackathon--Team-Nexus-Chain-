@@ -1,4 +1,4 @@
-# 🚀 [Your Project Title Here]
+# 🚀 [ChainGuard AI]
 
 > ⚠️ **Replace everything in `[ ]` brackets with your actual content before submission.**
 
@@ -8,69 +8,69 @@
 
 | Field | Value |
 |---|---|
-| **Team Name** | [Your Team Name] |
+| **Team Name** | [Team Nexus Chain] |
 | **Track** | [AI / DevOps / Sustainability / Open] |
-| **Team Lead** | [Name] — [email@ibm.com] |
-| **Members** | [Name 1], [Name 2], [Name 3] |
+| **Team Lead** | [Ved Koralwala] — [vedkoralwala7493@gmail.com] |
+| **Members** | [Nand Patel], [Tanmay Panchal], [Prerak Desai] |
 
 ---
 
 ## 🎯 Problem Statement
 
-> In 2–3 sentences: What problem does your project solve? Who experiences this problem?
-
-[Describe the real-world problem your project addresses. Be specific about who the user is and what pain point they face.]
-
----
+Supply chains can be disrupted by road blockages, severe weather, vehicle breakdowns, port issues, and other unexpected events, making it difficult for logistics teams to quickly identify which shipments are affected and what action should be taken. The problem becomes more critical for temperature-sensitive shipments and when multiple shipments and fleet assets need to be managed simultaneously.
 
 ## 💡 Solution
 
-> In 2–3 sentences: What did you build? How does it solve the problem above?
-
-[Describe your solution clearly. Explain the core mechanism — what makes it work.]
-
----
+ChainGuard AI is a decision-support platform that analyses supply-chain disruptions, affected shipments, shipment temperature, and available fleet assets to recommend the next best operational action. It compares possible routes, identifies shipment risk, highlights cold-chain temperature issues, and recommends a safer route or fleet action while keeping the final decision with the human operator.
 
 ## ✨ Key Features
 
-- **Feature 1:** [Brief description — e.g., "Real-time anomaly detection using watsonx.ai"]
-- **Feature 2:** [Brief description]
-- **Feature 3:** [Brief description]
-- **Feature 4:** [Optional]
-- **Feature 5:** [Optional]
+## ✨ Key Features
 
+- **Disruption Analysis:** Select origin, destination, disruption type, and severity to analyse the potential impact on shipments.
+- **Shipment Risk Assessment:** Classifies shipments into risk levels such as Low, Medium, High, and Critical based on disruption and shipment conditions.
+- **Route Intelligence:** Provides Route A, Route B, and Route C options with estimated distance and travel time for comparison.
+- **AI Route Recommendation:** Recommends the most suitable route based on disruption severity, route risk, and shipment conditions.
+- **Cold-Chain Monitoring:** Checks the current shipment temperature against a defined safe temperature range and raises a critical alert when the temperature is out of range.
+- **Fleet Optimisation:** Identifies available vehicles and suggests fleet redeployment for high-priority shipments.
+- **Human-in-the-Loop Decision Making:** The system recommends an action, while the operator can review and select the final route or action.
 ---
 
 ## 🛠️ Tech Stack
 
 | Category | Technologies |
 |---|---|
-| **Languages** | [e.g., Python, TypeScript] |
-| **Frameworks** | [e.g., FastAPI, React] |
-| **IBM Technologies** | [e.g., watsonx.ai, IBM Bob, IBM Cloud] |
-| **Databases** | [e.g., PostgreSQL, Redis] |
-| **Other** | [e.g., Docker, GitHub Actions] |
+| **Languages** | HTML5, CSS3, JavaScript |
+| **Frameworks** | Vanilla JavaScript / Web UI |
+| **IBM Technologies** | IBM Bob (AI integration planned for the final solution) |
+| **Databases** | Not used in the current prototype |
+| **Other** | GitHub, GitHub Actions |
 
 ---
 
 ## 📁 Repository Structure
 
-```
-├── src/                  # All source code
-├── docs/                 # Written documentation
+```text
+├── index.html             # Main application interface
+├── style.css              # Application styling and responsive UI
+├── script.js              # Frontend logic and prototype decision engine
+│
+├── docs/
 │   ├── problem-statement.md
 │   ├── solution-overview.md
 │   ├── architecture.md
 │   └── setup-guide.md
-├── demo/                 # Demo artifacts
-│   ├── screenshots/      # App screenshots
-│   └── demo-video-link.txt  # Link to demo video
-├── presentation/         # Slide deck
-└── submission.yaml       # Structured submission metadata
-```
-
+│
+├── demo/
+│   ├── screenshots/
+│   └── demo-video-link.txt
+│
+├── presentation/
+│   └── Hackathon.pptx
+│
+└── submission.yaml
 ---
-
+```
 ## ⚡ How to Run
 
 > **Copy these exact steps from your [`docs/setup-guide.md`](docs/setup-guide.md)**
