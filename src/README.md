@@ -1,6 +1,7 @@
 # Source Code
 
-Place all your project's source code in this folder.
+Place all your project's source code in this folder. Placed in main src folder
+
 
 ## Structure Guidelines
 
