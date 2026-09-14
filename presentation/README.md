@@ -1,6 +1,5 @@
 # Presentation
 
-Place your slide deck in this folder.
 
 ## Accepted Formats
 
