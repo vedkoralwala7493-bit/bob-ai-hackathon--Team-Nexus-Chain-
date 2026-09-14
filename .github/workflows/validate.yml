@@ -34,9 +34,9 @@ jobs:
             "docs/architecture.md"
             "docs/setup-guide.md"
             "demo/demo-video-link.txt"
-            "index.html"
-            "style.css"
-            "script.js"
+            "src/index.html"
+            "src/style.css"
+            "src/script.js"
           )
 
           for f in "${REQUIRED_FILES[@]}"; do
@@ -115,7 +115,7 @@ jobs:
         run: |
           CODE_FILES=0
 
-          for f in index.html style.css script.js; do
+          for f in src/index.html src/style.css src/script.js; do
             if [ -s "$f" ]; then
               CODE_FILES=$((CODE_FILES + 1))
             fi
@@ -123,7 +123,7 @@ jobs:
 
           if [ "$CODE_FILES" -lt 3 ]; then
             echo "❌ One or more main project files are missing or empty."
-            echo "Expected: index.html, style.css, script.js"
+            echo "Expected: src/index.html, src/style.css, src/script.js"
             exit 1
           fi
 
@@ -132,17 +132,17 @@ jobs:
       # ── 5. Basic HTML/JS validation ──────────────────────────────────
       - name: Check frontend files
         run: |
-          if ! grep -qi "<html" index.html; then
-            echo "❌ index.html does not appear to contain valid HTML."
+          if ! grep -qi "<html" src/index.html; then
+            echo "❌ src/index.html does not appear to contain valid HTML."
             exit 1
           fi
 
-          if ! grep -q "style.css" index.html; then
-            echo "⚠️ Warning: style.css is not linked in index.html."
+          if ! grep -q "style.css" src/index.html; then
+            echo "⚠️ Warning: style.css is not linked in src/index.html."
           fi
 
-          if ! grep -q "script.js" index.html; then
-            echo "⚠️ Warning: script.js is not linked in index.html."
+          if ! grep -q "script.js" src/index.html; then
+            echo "⚠️ Warning: script.js is not linked in src/index.html."
           fi
 
           echo "✅ Frontend files passed basic checks."
